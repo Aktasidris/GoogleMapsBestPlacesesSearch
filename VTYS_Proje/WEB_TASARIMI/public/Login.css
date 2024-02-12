@@ -1,0 +1,149 @@
+#main-container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("resim.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    #form-container {
+        display: flex;
+        position: relative;
+    }
+    #form-container::before {
+        border-radius: 50%;
+        content: '';
+        height: 30px;
+        top: 18px;
+        width: 30px;
+        position: absolute;
+        background: #f3e125;
+        box-shadow: 20px 0px 50px 40px #f3e125;
+        animation: floating 3s ease-in-out infinite alternate;
+        
+    }
+    #form-container::after {
+    
+    border-radius: 50%;
+    content: '';
+    height: 30px;
+    width: 30px;
+    right: 0;
+    z-index: 999!important;
+    box-shadow: -20px 0px 50px 40px #29b4ff;
+    background: #29b4ff;
+    bottom: 18px;
+    position: absolute;
+    z-index: -1;
+    animation: floating 3s ease-in-out infinite alternate;
+    }
+    input:focus {
+        outline: none;
+    }
+    #content {
+        width: 400px !important;
+        height: 500px;
+        font-size: 2rem;
+        border: 1px solid #180404c2;
+        padding: 1.5rem 3rem;
+        width: 100%;
+        border-radius: 15px;
+        background: #19020212;
+        backdrop-filter: blur(30px);
+        font-family: calibri;
+    }
+    h2{
+        margin-bottom: 1.2rem;
+    }
+    .title-text {
+        text-align: center;
+        color: rgb(226, 222, 234);
+    }
+    .field {
+        position: relative;
+    }
+    .field label {
+        position: absolute;
+        font-size: 1.3rem;
+        bottom: 0;
+        margin-bottom: 5px; z-index: -1;
+        transition: .4s;
+    
+    }
+    .field input {
+        color: white;
+        border: none;
+        border-bottom: 1px solid #3f3f3f;
+        background: none;
+        padding: 5px 0;
+        margin-top: 32px;
+        width: 100%;
+    }
+    .field input:focus+label,
+    .field input:valid+label {
+    bottom: 20px;
+    font-size: 13px;
+    }
+    #action {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0 30px;
+    }
+    label {
+    font-size: 14px;
+    display: flex;
+    color: #ddd;
+    cursor: pointer;
+    }
+    label input {
+        margin-right: 3px; cursor: pointer;
+    }
+    #forget,#signup a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    }
+    #forget:hover, #signup a:hover {
+        color: rgb(186, 186, 186)
+    }
+    #login {
+        padding: 6px 18px;
+        border-radius: 30px;
+        font-weight: bold;
+        width: 100%;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        background: #e8e7eb;
+        transition: .3s;
+    }
+    #login:hover {
+        transform: scale(0.9);
+    }
+    #login-form{
+        display: flex;
+        flex-direction: column;
+        gap:20px
+    }
+    #signup {
+        color: #bcbcbc;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 25px;
+    }
+    @keyframes floating {
+        from {
+        transform: scale(0.7);
+        }
+        to {
+        transform: scale(1);
+        }
+        }
+    
+    
+    
+    
+    

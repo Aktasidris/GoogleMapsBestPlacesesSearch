@@ -1,0 +1,152 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main-container {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(#3a1397, #630cc100);
+    background-image: url("arka.jpeg");   
+}
+.menu {
+    height: 100%;
+    transition: .3s;
+    background: #ffffff12;
+    padding: 20px 20px 20px 0;
+    width: 85px;
+    box-shadow: 8px 0px 9px 0px #00000014;
+    backdrop-filter: blur(5px);
+    min-height: 100vh;
+
+}
+.menu-content li {
+    list-style: none;
+    border-radius: 0px 50px 50px 0;
+    transition: .3s;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+a{
+text-decoration: none; 
+color: rgb(219, 233, 220);
+display: flex;
+align-items: center; 
+font-family: 'calibri';
+}
+.material-symbols-outlined {
+    width: 30px;
+    height: 30px;
+
+    background: #0c0c0c;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    padding:  1rem;
+}
+li:hover {
+    background: #0c0c0c;
+}
+
+li:hover .material-symbols-outlined{
+    background-color: #d4c9c9;
+}
+li:hover .material-symbols-outlined i{
+    color: #333;
+}
+li span:nth-child(2) {
+    display: none;  
+}
+.menu:hover{
+    width: 260px;
+    height: 260px;
+}
+.menu:hover li span:nth-child(2){
+    display: block;
+}
+.material-symbols-outlined i{
+    font-size: 0.9rem;
+}
+.icon-text{
+    margin-left: 1rem;
+}
+#item_container{
+    overflow: hidden;
+    width: 800px;
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 2rem;
+    color:#fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-height: 100vh;
+    transition: max-height 0.3s ease-out;
+}
+#Sektör_alan{
+    box-shadow: rgba(4, 4, 4, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
+}
+#il_alan{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+#ilçe_alan{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+
+/* üst logo
+div {
+    position: relative;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+
+.Favori_Buton {
+    background-color: #131415;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.Favori_Buton:hover {
+    background-color: #0b1014;
+}
+
+.Favori_Butonu{
+    height: 10px;
+    width: 20px;
+    display: flex;
+    
+}
+
+.text {
+
+color: transparent;
+-webkit-text-stroke: 1px rgba(255,255,255,0.6);
+}
+.hover-text {
+position: absolute;
+inset: 0;
+width: 0%;
+color: var(--clr);
+overflow: hidden;
+border-right: 6px solid var(--clr);
+transition: 0.5s ease-in-out;
+}
+div:hover .hover-text {
+
+width: 100%;
+filter: drop-shadow (0 0 40px var(--clr));
+}
+
+*/
+   

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Kayıt.css" />
+    <title>Kayıt Ol</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="form-container">
+        <div id="content">
+          <h2 class="title-text">Kayıt Ol</h2>
+          <form id="register-form">
+            <div class="field">
+              <input id="email" required type="text" />
+              <label>E-Posta Adresi</label>
+            </div>
+            <div class="field">
+              <input id="password" required type="password" />
+              <label>Şifre Oluşturun</label>
+            </div>
+            <div id="action">
+              <button id="register">Kayıt Olun</button>
+            </div>
+            <div id="signup">
+              Zaten bir hesabınız var mı?
+              <a href="Login.html">Giriş Yap</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Kullanıcının kayıt işlemi
+      document
+        .getElementById("register")
+        .addEventListener("click", function () {
+          // API'ye gönderilecek verileri oluştur
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const data = {
+            email: email,
+            password: password,
+          };
+          event.preventDefault();
+          if (!email && !password) {
+            console.log("E-posta ve şifre alanları boş bırakılamaz.");
+            return;
+          }
+          // API'ye POST isteği gönder
+          fetch("http://localhost:3000/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          })
+            .then((response) => response.json())
+            .then((result) => {
+              // API'den gelen cevap işlemleri burada yapabilirsiniz
+              if (result.success) {
+                console.log("Kayıt başarılı, şimdi giriş yapabilirsiniz.");
+                window.location.href = "Login.html";
+                // Kullanıcıyı giriş sayfasına yönlendirin veya başka bir işlem yapın
+              } else {
+                alert("Kayıt Başarısız");
+                console.log("Kayıt başarısız, lütfen tekrar deneyin.");
+              }
+            })
+            .catch((error) => {
+              console.error("API isteği başarısız: " + error);
+              console.log("Bir hata oluştu, lütfen tekrar deneyin.");
+            });
+        });
+    </script>
+  </body>
+</html>
